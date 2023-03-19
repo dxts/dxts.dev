@@ -24,19 +24,30 @@ body {
   margin-bottom: 5rem;
 }
 
-/* two column layout with golden ratio */
+/* 
+  on wide screens: two column layout 
+  on narrow screens: one column layout
+*/
 .header-row {
   display: grid;
-  grid-template-columns: 1fr 1.62fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 2rem;
   align-items: center;
-  margin-bottom: 2rem;
 }
-
 /* align text to left and reduce vertical space between hi tags */
 .summary {
   text-align: left;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .header-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .summary {
+    text-align: center;
+  }
 }
 
 img {
@@ -62,7 +73,6 @@ p {
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .contacts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -70,7 +80,6 @@ p {
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -78,10 +87,16 @@ p {
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .links a {
   text-decoration: none;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .social,
+  .contacts {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* two column layout with 10%:90% layout */
@@ -92,7 +107,6 @@ p {
   align-items: center;
   margin-bottom: 2rem;
 }
-
 /* make text vertical and bold */
 .experience-row-header {
   writing-mode: vertical-lr;
@@ -101,6 +115,20 @@ p {
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .experience-row {
+    grid-template-columns: 1fr;
+  }
+  .experience-row-header {
+    writing-mode: horizontal-tb;
+    transform: scale(1);
+    text-orientation: mixed;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
 }
 
 .experience-row-items {
