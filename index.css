@@ -1,7 +1,16 @@
-:root {
-  --main-bg-color: #e5e2ea;
-  --main-heading-color: #202028;
-  --main-text-color: #2a272b;
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg-color: #e5e2ea;
+    --main-heading-color: #202028;
+    --main-text-color: #2a272b;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #2a272b;
+    --main-heading-color: #91b2b7;
+    --main-text-color: #e5e2ea;
+  }
 }
 
 body {
@@ -50,9 +59,9 @@ body {
   }
 }
 
-img {
+.profile-image img {
   border-radius: 50%;
-  max-width: 50%;
+  max-width: 250px;
 }
 
 h1,
@@ -73,30 +82,29 @@ p {
   align-items: center;
   margin-bottom: 2rem;
 }
-.contacts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2rem;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 2rem;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.links a {
-  text-decoration: none;
-  margin-right: 10px;
-}
-
 @media (max-width: 768px) {
-  .social,
-  .contacts {
+  .social {
     grid-template-columns: 1fr;
   }
+}
+
+.social-links,
+.social-badges {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column;
+  }
+}
+
+.social-links a {
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 /* two column layout with 10%:90% layout */
