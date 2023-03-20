@@ -75,19 +75,6 @@ p {
   margin-bottom: 20px;
 }
 
-.social {
-  display: grid;
-  grid-template-columns: 0.2fr 0.8fr;
-  grid-column-gap: 2rem;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-@media (max-width: 768px) {
-  .social {
-    grid-template-columns: 1fr;
-  }
-}
-
 .social-links,
 .social-badges {
   display: flex;
@@ -104,6 +91,7 @@ p {
 
 .social-links a {
   text-decoration: none;
+  color: var(--main-heading-color);
   margin-right: 10px;
 }
 
@@ -141,4 +129,13 @@ p {
 
 .experience-row-items {
   text-align: left;
+}
+
+#touching-hands {
+  height: 5rem;
+}
+@media (max-width: 768px) {
+  #touching-hands {
+    transform: rotate(90deg);
+  }
 }
