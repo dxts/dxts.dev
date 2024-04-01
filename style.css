@@ -1,0 +1,312 @@
+/* Variables */
+
+:root {
+    /* Soft blue for primary color */
+    --primary-color: #5e81ac;
+    /* Lighter blue for hover effect */
+    --secondary-color: #88c0d0;
+    /* Light background for minimalism */
+    --background-color: #eceff4;
+    /* Softer shade for text */
+    --text-color: #3b4252;
+    /* Darker shade for headings */
+    --title-color: #2e3440;
+    /* Soft red for accent */
+    --accent-color-red: #bf616a;
+    /* Soft yellow/orange for accent */
+    --accent-color-yellow: #ebcb8b;
+    /* Soft green for accent */
+    --accent-color-green: #a3be8c;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Theme Variables */
+        --primary-color: #5e81ac; /* Darker primary color */
+        --secondary-color: #4c566a;
+        --background-color: #2e3440; /* Dark background */
+        --text-color: #eceff4; /* Lighter text for contrast */
+        --title-color: #d8dee9; /* Lighter titles for contrast */
+        --accent-color-red: #bf616a;
+        --accent-color-yellow: #ebcb8b;
+        --accent-color-green: #a3be8c;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.sidebar nav {
+    position: sticky;
+    top: 20px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "JetBrains Mono", monospace;
+    /* Use JetBrains Mono for headings */
+    color: var(--title-color);
+}
+
+h1,
+h2 {
+    margin-bottom: 15px;
+}
+
+h3 {
+    text-decoration: underline;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+section {
+    margin-bottom: 20px;
+    width: 95%;
+}
+
+section h1,
+section h2 {
+    position: sticky;
+    top: 0px;
+    background-color: var(--background-color);
+    padding-top: 20px;
+}
+
+/* Adding a touch of organic shapes */
+section#about:before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 50%;
+    background-color: var(--accent-color-green);
+    /* Soft green */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar nav:before {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: var(--accent-color-yellow);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling the details element */
+details.list-item {
+    padding: 15px;
+
+    & summary::-webkit-details-marker {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: text-top;
+
+        height: 50px;
+        width: 5px;
+        background-color: var(--accent-color-red);
+        /* Soft red */
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+
+    /* Formatting the title pane for experience and education */
+    & summary.list-item-title {
+        display: inline-block;
+        vertical-align: top;
+
+        margin-bottom: 15px;
+        list-style: none;
+        cursor: pointer;
+
+        & p {
+            display: inline;
+            font-family: "JetBrains Mono", monospace;
+            color: var(--title-color);
+            font-weight: 500;
+            margin-bottom: 0px;
+        }
+
+        & p span + span {
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 2px solid var(--title-color);
+        }
+    }
+
+    & ul {
+        list-style: inside square;
+        padding-left: 15px;
+        margin-top: 0px;
+    }
+
+    & li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 905px) {
+    details.list-item::before {
+        display: block;
+        height: 5px;
+        width: 50px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Styling the skills section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.skills-category {
+    margin-bottom: 15px;
+}
+
+.skills-category h4 {
+    font-family: "JetBrains Mono", monospace;
+    margin-bottom: 5px;
+}
+
+.skills-category p {
+    margin: 0;
+}
+
+/* Styling the intro section */
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+}
+
+.intro-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.intro-info {
+    flex: 2;
+}
+
+.intro-info h1,
+.intro-info h2,
+.intro-info p {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Styling the sidebar contact section */
+.quick-contacts {
+    margin-top: 150px;
+}
+
+.quick-contacts > * {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Styling the footer */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: var(--text-color);
+    border-top: 2px solid var(--text-color);
+}
+
+.site-footer p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Empty space so that content starts in the center of the viewport */
+#page-header {
+    height: 33vh;
+}

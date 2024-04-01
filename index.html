@@ -1,191 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dixit Sabharwal</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <!-- First row with two columns; image and summary. -->
-      <div class="header-row">
-        <div class="profile-image">
-          <img src="profile-photo.jpeg" alt="Profile Image" />
-        </div>
-        <div class="summary">
-          <h1>Dixit Sabharwal</h1>
-          <h2>Software Engineer</h2>
-          <h3>Full-Stack Web Development</h3>
-          <p>
-            I am a full-stack web developer, seeking to stay up-to-date with the
-            latest developments in the field, including languages, frameworks,
-            and deployment environments. Dedicated to building reliable,
-            practical, and scalable systems, and am learning and improving my
-            knowledge to achieve this. I am particularly interested in working
-            on projects or in companies that endorse open source projects or
-            work in the public sector, as I believe in the value of making
-            technology accessible to everyone.
-          </p>
-        </div>
-      </div>
-      <!-- Contact details -->
-      <div class="experience-row">
-        <div class="experience-row-header">
-          <img id="touching-hands"
-            src="touching-hands.svg"
-            alt="Get in touch"
-          />
-        </div>
-        <div>
-          <div class="social-links">
-            <p>📍 Lausanne, Switzerland</p>
-            <p>
-              <a href="mailto:hire@dxts.dev"> 📧 </a>
-              hire@dxts.dev
-            </p>
-            <p>
-              <a href="tel:+41762368272">📞</a>
-              +41 76 236 8272
-            </p>
-          </div>
-          <div class="social-badges">
-            <a href="https://github.com/dxts" target="_blank">
-              <img
-                src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
-                alt="Github badge"
-              />
-            </a>
-            <a href="https://linkedin.com/in/dixit-s" target="_blank">
-              <img
-                src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-                alt="LinkedIn badge"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dixit Sabharwal - Software Engineer</title>
+        <meta
+            name="description"
+            content="Dixit Sabharwal, software engineer based in Lausanne and currently studying at EPFL."
+        />
+        <!-- Open Graph Tags -->
+        <meta property="og:title" content="Dixit Sabharwal - Software Engineer" />
+        <meta
+            property="og:description"
+            content="Dixit Sabharwal, software engineer based in Lausanne and currently studying at EPFL."
+        />
+        <meta property="og:image" content="https://dxts.dev/memoji.jpeg" />
+        <meta property="og:url" content="https://dxts.dev" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dixit Sabharwal" />
+        <!-- Load Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Load CSS -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    </head>
 
-      <!-- Skills -->
-      <div class="experience-row">
-        <div class="experience-row-header">
-          <h2>Skills</h2>
-        </div>
-        <div class="experience-row-items">
-          <li>Programming in Java/Kotlin, JavaScript/TypeScript, Python.</li>
-          <li>UI development with React.js</li>
-          <li>Data management in SQL, NoSQL, KV stores (DynamoDB).</li>
-          <li>Cloud infrastructure with AWS or Azure.</li>
-          <li>
-            Managing above mentioned infra with CDK or Terraform (or CDK for
-            Terraform :D)
-          </li>
-          <li>Proficient in functional programming with Scala.</li>
-        </div>
-      </div>
+    <body>
+        <header id="page-header"></header>
+        <div class="container">
+            <main class="main-content">
+                <header class="intro-section">
+                    <div class="intro-info">
+                        <h1>Dixit Sabharwal</h1>
+                        <h2>Software Engineer</h2>
+                        <p>
+                            <i>
+                                currently studying at EPFL and acting as a swiss army knife for software development
+                                work
+                            </i>
+                        </p>
+                    </div>
+                    <div class="intro-photo">
+                        <img src="profile-photo.jpeg" alt="photo of me" class="profile-photo" />
+                    </div>
+                </header>
 
-      <!-- Work experience -->
-      <div class="experience-row">
-        <div class="experience-row-header">
-          <h2>Work</h2>
-        </div>
-        <div class="experience-row-items">
-          <div class="work-experience">
-            <h3>Software Development Engineer Intern @ AWS - Amazon</h3>
-            <strong>August 2020 - February 2023</strong>
-            <i>Berlin, Germany</i>
-            <ul>
-              <li>
-                Built a management console to empower ongoing migration of
-                service to a new data model and store.
-              </li>
-              <li>
-                Console is a web-based UI to view and search through data, also
-                compare between old and new versions, and trigger different
-                tasks in the migration pipeline.
-              </li>
-              <li>
-                Used React and TypeScript for the website UI. Used the AWS
-                serverless stack (Lambda, API Gateway, DynamoDB) for the
-                backend. Managed infrastructure in AWS CDK.
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <div class="work-experience">
-            <h3>Teaching Assistant @ Faculty of EEMCS, TU Delft</h3>
-            <strong>September 2019 - June 2021</strong>
-            <i>Delft, Netherlands</i>
-            <p>
-              Teaching Assistant for > 10 different courses from the Computer
-              Science program. Main tasks were to help students through
-              personalised and group assistance, and supervise teams in project
-              work.
-            </p>
-          </div>
-          <hr />
-          <div class="work-experience">
-            <h3>Web Developer @ Dizconto Ltd.</h3>
-            <strong>April 2020 - July 2020</strong>
-            <i>Den Haag, Netherlands</i>
-            <ul>
-              <li>
-                Built a management console frontend for Dizconto, which provided
-                social media marketing integrations.
-              </li>
-              <li>
-                Planned website development, converted mockups into usable web
-                presence with TypeScript, React and NodeJS.
-              </li>
-              <li>
-                Also worked on implementing a development and deployment (CI/CD)
-                pipeline using Terraform and AWS.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a full-stack developer, trying to stay ahead of the newest trends in building engaging and
+                        consistent frontends, as well as developing maintainable APIs that adhere to open standards.
+                        <br />
+                        Also trying to stay proficient in deploying these solutions across various environments; from
+                        Kubernetes clusters and serverless cloud functions to bare-metal VMs and on-premises servers.
+                    </p>
+                    <p>
+                        I'm dedicated to learning and building systems that are reliable and practical but also scalable
+                        where needed. I am particularly interested in working on projects or with companies that support
+                        open-source software or work in the public sector. I'm convinced of the importance of making
+                        quality software accessible to everyone.
+                    </p>
+                </section>
 
-      <!-- Study / degree details -->
-      <div class="experience-row">
-        <div class="experience-row-header">
-          <h2>Study</h2>
-        </div>
-        <div class="experience-row-items">
-          <div class="education">
-            <h3>
-              M.Sc. Computer Science @ École polytechnique fédérale de Lausanne
-            </h3>
-            <strong>September 2021 - ongoing</strong>
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <details class="list-item">
+                        <summary class="list-item-title">
+                            <h3>Software Developer @ Facultés IC, EPFL</h3>
+                            <p><span>June 2023 - Jul 2023</span><span>Lausanne, Switzerland</span></p>
+                        </summary>
+                        <ul>
+                            <li>
+                                Part of team that set-up an automatic grading system for programming assignments.
+                                Through a Moodle plugin and Kubernetes cluster the system allowed for easy scalability
+                                and fault-tolerance during peak times of the semester.
+                            </li>
+                            <li>
+                                Created a controller (using Spring and Java) that runs each submission as a Job on the
+                                Kubernetes cluster. The controller sets up the env for the grading task, and returns the
+                                outcomes to Moodle.
+                            </li>
+                            <li>
+                                Set-up CI/CD pipeline using GitLab CI that automatically deploys the controller and
+                                Moodle in a staging environment, for quick integration testing and feedback.
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="list-item">
+                        <summary class="list-item-title">
+                            <h3>Data analyst @ Taskbase</h3>
+                            <p><span>Jul 2023 - Sep 2023</span><span>Zurich, Switzerland</span></p>
+                        </summary>
+                        <ul>
+                            <li>
+                                Built CLI tool which extracts data from CSV and Excel sources provided by clients and
+                                passes it through the Taskbase API, to speed up the onboarding process.
+                            </li>
+                            <li>
+                                Generated sample data for QA tasks, through prompt engineering and OpenAI GPT models, to
+                                compensate for the lack of real data from new clients.
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="list-item">
+                        <summary class="list-item-title">
+                            <h3>Software Development Intern @ AWS/Amazon</h3>
+                            <p><span>Aug 2022 - Feb 2023</span><span>Berlin, Germany</span></p>
+                        </summary>
+                        <ul>
+                            <li>
+                                Built a management console to empower ongoing migration of service to a new data model
+                                and store.
+                            </li>
+                            <li>
+                                Console is a web-based UI to view and search through data, also compare between old and
+                                new versions, and trigger different tasks in the migration pipeline.
+                            </li>
+                            <li>
+                                Used React and TypeScript for the website UI.<br />
+                                Used the AWS serverless stack (Lambda, API Gateway, DynamoDB) for the backend. <br />
+                                Managed infrastructure in AWS CDK.
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="list-item">
+                        <summary class="list-item-title">
+                            <h3>Teaching Assistant @ Faculty of EEMCS, TU Delft</h3>
+                            <p><span>Sep 2019 - Jun 2021</span><span>Delft, Netherlands</span></p>
+                        </summary>
+                        <ul>
+                            <li>
+                                Teaching Assistant for > 10 different courses for the Computer Science bachelors
+                                program.
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="list-item">
+                        <summary class="list-item-title">
+                            <h3>Web Developer @ Dizconto Ltd.</h3>
+                            <p><span>Apr 2020 - Jul 2020</span><span>Den Haag, Netherlands</span></p>
+                        </summary>
+                        <ul>
+                            <li>
+                                Built a management console frontend for Dizconto, which provided social media marketing
+                                integrations.
+                            </li>
+                            <li>
+                                Planned website development, converted mockups into usable web presence with TypeScript,
+                                React and NodeJS.
+                            </li>
+                            <li>
+                                Also worked on implementing a development and deployment (CI/CD) pipeline using
+                                Terraform and AWS.
+                            </li>
+                        </ul>
+                    </details>
+                </section>
 
-            <p>
-              Currently one year into the program following courses on software
-              security and privacy, compilers, and data management and analysis.
-            </p>
-          </div>
-          <hr />
-          <div class="education">
-            <h3>
-              B.Sc. Computer Science and Engineering @ Technische Universiteit
-              Delft
-            </h3>
-            <strong>September 2018 - June 2021</strong>
+                <section id="education">
+                    <h2>Education</h2>
+                    <details class="list-item">
+                        <summary class="list-item-title">
+                            <h3>M.Sc. in Computer Science</h3>
+                            <p><span>EPFL</span><span>Sep 2021 - Present</span></p>
+                        </summary>
+                        <ul>
+                            <li>
+                                Following courses on software security and privacy, compilers and type-systems, and
+                                large-scale data handling.
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="list-item">
+                        <summary class="list-item-title">
+                            <h3>B.Sc. in Computer Science Engineering</h3>
+                            <p><span>TU Delft</span><span>Sep 2018 - July 2021</span></p>
+                        </summary>
+                        <ul>
+                            <li>Graduated cum laude with a GPA of 8.8.</li>
+                            <li>Thesis on "Formal verification of functional programs in Haskell and Agda".</li>
+                            <li>Minor in Quantum Science and Information.</li>
+                        </ul>
+                    </details>
+                </section>
 
-            <ul>
-              <li>Graduated cum laude with a GPA of 8.8.</li>
-              <li>
-                Thesis on "Formal verification of functional programs in Haskell
-                and Agda".
-              </li>
-              <li>Minor in Quantum Science and Information.</li>
-              <li>
-                Main topics studied; OOP & FP, Algorithms, Database systems,
-                Software Engineering.
-              </li>
-            </ul>
-          </div>
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skills-category">
+                            <h4>Languages</h4>
+                            <p>Java/Kotlin, Go, Javascript/Typescript, Python, Scala/Haskell</p>
+                        </div>
+                        <div class="skills-category">
+                            <h4>UI</h4>
+                            <p>React.js, Remix, HTML/CSS</p>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Server Frameworks</h4>
+                            <p>SpringBoot, Node.js/Express, Gin</p>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Data Analysis</h4>
+                            <p>Pandas, Scikit-learn</p>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Database Technologies</h4>
+                            <p>SQLite, PostgreSQL, MySQL, DynamoDB</p>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Large Scale Data Wrangling</h4>
+                            <p>Apache Spark, Hadoop</p>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Deployment Environments</h4>
+                            <p>AWS, Azure, Kubernetes (k8s), Docker</p>
+                        </div>
+                        <div class="skills-category">
+                            <h4>CI/CD</h4>
+                            <p>GitLab CI</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <p>
+                        If you have a open role to pitch, want to collaborate on a project, or just want to chat, feel
+                        free to reach out to me at <a href="mailto:hire@dxts.dev">hire@dxts.dev</a> or connect with me
+                        on <a href="https://linkedin.com/in/dixit-s">LinkedIn</a>.
+                    </p>
+                    <br />
+                    <p>You can find me on the streets of 📍 Lausanne, Switzerland.</p>
+                </section>
+            </main>
+            <aside class="sidebar">
+                <div class="quick-contacts">
+                    <img
+                        id="touching-hands"
+                        src="icons/touching-hands.svg"
+                        alt="Image of two hands reaching out and touching"
+                        aria-hidden="true"
+                        style="height: 32px"
+                    />
+                    <a href="mailto:hire@dxts.dev">
+                        <img id="email" src="icons/gmail.svg" alt="Email icon" aria-hidden="true" />
+                    </a>
+                    <a href="https://linkedin.com/in/dixit-s" target="_blank" rel="noopener noreferrer">
+                        <img id="linkedin" src="icons/linkedin.svg" alt="LinkedIn icon" aria-hidden="true"
+                    /></a>
+                    <a href="https://github.com/dxts" target="_blank" rel="noopener noreferrer">
+                        <img id="github" src="icons/github.svg" alt="GitHub icon" aria-hidden="true"
+                    /></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </aside>
         </div>
-      </div>
-    </div>
-  </body>
+        <footer class="site-footer">
+            <p>Last Updated: <time datetime="2024-04-02">April 2, 2024</time></p>
+        </footer>
+    </body>
 </html>
