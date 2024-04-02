@@ -1,5 +1,4 @@
 /* Variables */
-
 :root {
     /* Soft blue for primary color */
     --primary-color: #5e81ac;
@@ -11,25 +10,30 @@
     --text-color: #3b4252;
     /* Darker shade for headings */
     --title-color: #2e3440;
+
     /* Soft red for accent */
     --accent-color-red: #bf616a;
     /* Soft yellow/orange for accent */
     --accent-color-yellow: #ebcb8b;
     /* Soft green for accent */
     --accent-color-green: #a3be8c;
+
+    --title-font: "JetBrains Mono", monospace;
+    --text-font: "Inter", sans-serif;
+
+    --normal-font-size: 1rem;
+    --large-font-size: 1.4rem;
+    --extra-large-font-size: 1.8rem;
 }
 
+/* Dark Theme Variables */
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Dark Theme Variables */
         --primary-color: #5e81ac; /* Darker primary color */
         --secondary-color: #4c566a;
         --background-color: #2e3440; /* Dark background */
         --text-color: #eceff4; /* Lighter text for contrast */
         --title-color: #d8dee9; /* Lighter titles for contrast */
-        --accent-color-red: #bf616a;
-        --accent-color-yellow: #ebcb8b;
-        --accent-color-green: #a3be8c;
     }
 }
 
@@ -42,7 +46,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    font-size: 1rem;
+    font-size: var(--normal-font-size);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -68,30 +72,6 @@ a {
 .sidebar {
     flex: 1;
     padding-left: 20px;
-}
-
-.sidebar nav {
-    position: sticky;
-    top: 20px;
-    background-color: var(--background-color);
-    font-family: "JetBrains Mono", monospace;
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar nav ul li a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-.sidebar nav ul li a:hover {
-    color: var(--secondary-color);
 }
 
 h1,
@@ -146,10 +126,10 @@ section#about:before {
 .sidebar nav:before {
     content: "";
     display: block;
-    height: 20px;
-    width: 20px;
+    height: var(--large-font-size);
+    width: var(--large-font-size);
     background-color: var(--accent-color-yellow);
-    border-radius: 10px;
+    border-radius: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -291,6 +271,53 @@ details.list-item {
 .quick-contacts > * {
     display: inline;
     margin-right: 20px;
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+/* PDF download button */
+.download-button {
+    text-decoration: none;
+    display: block;
+    font-family: var(--title-font);
+    font-size: var(--large-font-size);
+    font-weight: 500;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+
+    padding: 15px 0px;
+    margin-top: 10px;
+}
+
+.download-button:hover {
+    color: var(--accent-color-yellow);
+}
+
+/* Styling the sidebar nav links */
+.sidebar nav {
+    position: sticky;
+    top: 20px;
+    background-color: var(--background-color);
+    font-family: var(--title-font);
+    font-size: var(--large-font-size);
+    font-weight: 500;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    color: var(--secondary-color);
 }
 
 /* Styling the footer */
@@ -304,27 +331,10 @@ details.list-item {
 
 .site-footer p {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: var(--text-font);
 }
 
-/* PDF download button */
-.download-button {
-    display: inline-block;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-    background-color: var(--accent-color-red);
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    padding: 10px 20px;
-    margin-top: 20px;
-}
-
-.download-button:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Empty space so that content starts in the center of the viewport */
+/* Empty space in page header so that content starts in the center of the viewport */
 #page-header {
     height: 33vh;
 }
