@@ -1,0 +1,111 @@
+<!doctype html>
+{# Print template — rendered by builder/ from resume.yaml, then printed to resume.pdf by headless Chrome. #}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ basics.name }} - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="print.css" />
+  </head>
+
+  <body>
+    <header class="resume-header">
+      <h1>{{ basics.name }}</h1>
+      <p class="resume-label">{{ basics.label }}</p>
+      <p class="resume-contact">
+        <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
+        <span class="sep">·</span>
+        <a href="{{ basics.url }}">{{ basics.url | replace(from="https://", to="") }}</a>
+        {%- for profile in basics.profiles %}
+        <span class="sep">·</span>
+        <a href="{{ profile.url }}">{{ profile.url | replace(from="https://", to="") }}</a>
+        {%- endfor %}
+        <span class="sep">·</span>
+        <span>{{ basics.location.city }}, {{ basics.location.country }}</span>
+      </p>
+    </header>
+
+    <section id="about">
+      <h2>Profile</h2>
+      {%- for para in about %}
+      <p>
+        {%- for line in para %}
+        {{ line }}
+        {%- if not loop.last %}<br />{% endif %}
+        {%- endfor %}
+      </p>
+      {%- endfor %}
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      {%- for job in work %}
+      <div class="entry">
+        <div class="entry-title">
+          <h3>{{ job.position }} @ {{ job.company }}</h3>
+          <p class="entry-meta">
+            <span>{{ job.start }} - {{ job.end }}</span>
+            <span>{{ job.location }}</span>
+          </p>
+        </div>
+        <ul>
+          {%- for highlight in job.highlights %}
+          <li>
+            {%- for line in highlight %}
+            {{ line }}
+            {%- if not loop.last %}<br />{% endif %}
+            {%- endfor %}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      {%- for edu in education %}
+      <div class="entry">
+        <div class="entry-title">
+          <h3>{{ edu.degree }}</h3>
+          <p class="entry-meta">
+            <span>{{ edu.institution }}</span>
+            <span>{{ edu.start }} - {{ edu.end }}</span>
+          </p>
+        </div>
+        <ul>
+          {%- for highlight in edu.highlights %}
+          <li>
+            {%- for line in highlight %}
+            {{ line }}
+            {%- if not loop.last %}<br />{% endif %}
+            {%- endfor %}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        {%- for skill in skills %}
+        <div class="skills-category">
+          <h4>{{ skill.name }}</h4>
+          <p>{{ skill.text }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <footer class="resume-footer">
+      <p>Last updated {{ last_updated }} · {{ basics.url | replace(from="https://", to="") }}</p>
+    </footer>
+  </body>
+</html>

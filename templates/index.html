@@ -1,0 +1,194 @@
+<!doctype html>
+{# Screen template for dxts.dev — rendered by builder/ from resume.yaml. Do not edit index.html directly. #}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ meta.title }}</title>
+    <meta name="description" content="{{ meta.description }}" />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ meta.title }}" />
+    <meta property="og:description" content="{{ meta.description }}" />
+    <meta property="og:image" content="https://dxts.dev/memoji.jpeg" />
+    <meta property="og:url" content="{{ basics.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ basics.name }}" />
+    <!-- Load Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  </head>
+
+  <body>
+    <header id="page-header"></header>
+    <div class="container">
+      <main class="main-content">
+        <header class="intro-section">
+          <div class="intro-info">
+            <h1>{{ basics.name }}</h1>
+            <h2>{{ basics.label }}</h2>
+            <p>
+              <i>{{ basics.tagline }}</i>
+            </p>
+          </div>
+          <div class="intro-photo">
+            <img
+              src="{{ basics.image }}"
+              alt="photo of me"
+              class="profile-photo"
+            />
+          </div>
+        </header>
+
+        <section id="about">
+          <h2>About Me</h2>
+          {%- for para in about %}
+          <p>
+            {%- for line in para %}
+            {{ line }}
+            {%- if not loop.last %}<br />{% endif %}
+            {%- endfor %}
+          </p>
+          {%- endfor %}
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+          {%- for job in work %}
+          <details class="list-item">
+            <summary class="list-item-title">
+              <h3>{{ job.position }} @ {{ job.company }}</h3>
+              <p>
+                <span>{{ job.start }} - {{ job.end }}</span><span>{{ job.location }}</span>
+              </p>
+            </summary>
+            <ul>
+              {%- for highlight in job.highlights %}
+              <li>
+                {%- for line in highlight %}
+                {{ line }}
+                {%- if not loop.last %}<br />{% endif %}
+                {%- endfor %}
+              </li>
+              {%- endfor %}
+            </ul>
+          </details>
+          {%- endfor %}
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          {%- for edu in education %}
+          <details class="list-item">
+            <summary class="list-item-title">
+              <h3>{{ edu.degree }}</h3>
+              <p><span>{{ edu.institution }}</span><span>{{ edu.start }} - {{ edu.end }}</span></p>
+            </summary>
+            <ul>
+              {%- for highlight in edu.highlights %}
+              <li>
+                {%- for line in highlight %}
+                {{ line }}
+                {%- if not loop.last %}<br />{% endif %}
+                {%- endfor %}
+              </li>
+              {%- endfor %}
+            </ul>
+          </details>
+          {%- endfor %}
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            {%- for skill in skills %}
+            <div class="skills-category">
+              <h4>{{ skill.name }}</h4>
+              <p>{{ skill.text }}</p>
+            </div>
+            {%- endfor %}
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            If you have a open role to pitch, want to collaborate on a project,
+            or just want to chat, feel free to reach out to me at
+            <a href="mailto:{{ basics.email }}">{{ basics.email }}</a> or connect with me
+            on
+            {%- for profile in basics.profiles %}{% if profile.network == "LinkedIn" %} <a href="{{ profile.url }}">{{ profile.network }}</a>{% endif %}{% endfor %}.
+          </p>
+          <br />
+          <p>You can find me on the streets of 📍 {{ basics.location.city }}, {{ basics.location.country }}.</p>
+        </section>
+      </main>
+      <aside class="sidebar">
+        <div class="quick-contacts">
+          <img
+            id="touching-hands"
+            src="icons/touching-hands.svg"
+            alt="Image of two hands reaching out and touching"
+            aria-hidden="true"
+            width="32px"
+            height="32px"
+          />
+          <a href="mailto:{{ basics.email }}">
+            <img
+              id="email"
+              src="icons/email.svg"
+              alt="Email icon"
+              aria-hidden="true"
+              width="32px"
+              height="32px"
+            />
+          </a>
+          {%- for profile in basics.profiles %}
+          <a
+            href="{{ profile.url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              id="{{ profile.network | lower }}"
+              src="{{ profile.icon }}"
+              alt="{{ profile.network }} icon"
+              aria-hidden="true"
+              width="32px"
+              height="32px"
+          /></a>
+          {%- endfor %}
+        </div>
+        <div>
+          <a
+            href="resume.pdf"
+            download="DixitSabharwal_Resume.pdf"
+            class="download-button"
+          >
+            📄 Save Resume
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+    <footer class="site-footer">
+      <p>Last Updated: <time datetime="{{ last_updated_iso }}">{{ last_updated }}</time></p>
+    </footer>
+  </body>
+</html>

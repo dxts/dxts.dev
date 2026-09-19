@@ -1,0 +1,218 @@
+# Single source of truth for dxts.dev and resume.pdf.
+# Loosely follows the JSON Resume schema (https://jsonresume.org/schema/),
+# with display-friendly date strings instead of ISO dates.
+#
+# Edit this file, then run `make` to regenerate index.html, print.html
+# and resume.pdf.
+
+meta:
+  title: Dixit Sabharwal - Software Engineer
+  description: >-
+    Dixit Sabharwal, software engineer based in Lausanne and currently
+    studying at EPFL.
+
+basics:
+  name: Dixit Sabharwal
+  label: Software Engineer
+  tagline: >-
+    currently studying at EPFL and acting as a swiss army knife for
+    software development work
+  email: hire@dxts.dev
+  url: https://dxts.dev
+  image: profile-photo.webp
+  location:
+    city: Lausanne
+    country: Switzerland
+  profiles:
+    - network: LinkedIn
+      username: dixit-s
+      url: https://linkedin.com/in/dixit-s
+      icon: icons/linkedin.svg
+    - network: GitHub
+      username: dxts
+      url: https://github.com/dxts
+      icon: icons/github.svg
+
+# Each entry is a paragraph; a paragraph can be a plain string or a list
+# of lines (rendered with <br /> between them).
+about:
+  - - >-
+      I am a full-stack developer, trying to stay ahead of the newest
+      trends in building engaging and consistent frontends, as well as
+      developing maintainable APIs that adhere to open standards.
+    - >-
+      Also trying to stay proficient in deploying these solutions across
+      various environments; from Kubernetes clusters and serverless cloud
+      functions to bare-metal VMs and on-premises servers.
+  - >-
+    I'm dedicated to learning and building systems that are reliable and
+    practical but also scalable where needed. I am particularly interested
+    in working on projects or with companies that support open-source
+    software or work in the public sector. I'm convinced of the importance
+    of making quality software accessible to everyone.
+
+work:
+  - position: Software Engineer
+    company: AWS Billing (Amazon Web Services)
+    location: Berlin, Germany
+    start: Nov 2024
+    end: Currently
+    highlights:
+      - >-
+        Developing and operating a system of record storing the product
+        catalog at AWS. The system operates in 6 regions (across US, EU,
+        China) servicing over 90 million requests per day with over 99.95%
+        availability. Operations include 24/7 on-call shifts, incident
+        response and port mortems.
+      - >-
+        I modernised our service's integration with the internal
+        DataWarehouse to deliver a data freshness SLA of <10 minutes, by
+        replacing snapshot exports that run every 8 hours with a CDC
+        processing pipeline that wrote to an Apache Iceberg catalog. The
+        Iceberg catalog also opened the doors to seamless integration with
+        AWS and OSS tooling, reducing the barrier of entry for using this
+        data for new tools.
+      - >-
+        I also contributed to the storage-layer refactor of our service,
+        where we migrated data from a MySQL cluster to DynamoDB tables,
+        without any service downtime and while maintaining the 99.95%
+        availability SLA of our apis.
+      - >-
+        I have also driven our progress towards zero-touch environment
+        creation, where we automate the process of spinning up a new
+        production environment for our service (required for new regions
+        launched by AWS). This included maximising infra-as-code for our
+        compute and storage needs and automatting the bootstrapping of
+        configurations, databases, access-control, etc.
+      - >-
+        I have contributed to the development of a web console through
+        which the management of different AWS services configure and price
+        their catalog and offerings. It is a functional interface that
+        must enable the users to wrangle large amounts of data with
+        integrations for a/b testing changes and built in approval
+        processes for changes.
+      - >-
+        I have gained a lot of experience with developing on the AWS
+        serverless stack, consistening of "Lambda" functions, "ECS"
+        containers, "StepFunction" state-machine orchestrators, "Glue"
+        spark jobs, etc.
+
+  - position: Software Developer
+    company: Facultés IC, EPFL
+    location: Lausanne, Switzerland
+    start: June 2023
+    end: Jul 2023
+    highlights:
+      - >-
+        Part of team that set-up an automatic grading system for
+        programming assignments. Through a Moodle plugin and Kubernetes
+        cluster the system allowed for easy scalability and fault-tolerance
+        during peak times of the semester.
+      - >-
+        Created a controller (using Spring and Java) that runs each
+        submission as a Job on the Kubernetes cluster. The controller sets
+        up the env for the grading task, and returns the outcomes to
+        Moodle.
+      - >-
+        Set-up CI/CD pipeline using GitLab CI that automatically deploys
+        the controller and Moodle in a staging environment, for quick
+        integration testing and feedback.
+
+  - position: Data analyst
+    company: Taskbase
+    location: Zurich, Switzerland
+    start: Jul 2023
+    end: Sep 2023
+    highlights:
+      - >-
+        Built CLI tool which extracts data from CSV and Excel sources
+        provided by clients and passes it through the Taskbase API, to
+        speed up the onboarding process.
+      - >-
+        Generated sample data for QA tasks, through prompt engineering and
+        OpenAI GPT models, to compensate for the lack of real data from new
+        clients.
+
+  - position: Software Development Intern
+    company: AWS/Amazon
+    location: Berlin, Germany
+    start: Aug 2022
+    end: Feb 2023
+    highlights:
+      - >-
+        Built a management console to empower ongoing migration of service
+        to a new data model and store.
+      - >-
+        Console is a web-based UI to view and search through data, also
+        compare between old and new versions, and trigger different tasks
+        in the migration pipeline.
+      - - Used React and TypeScript for the website UI.
+        - >-
+          Used the AWS serverless stack (Lambda, API Gateway, DynamoDB)
+          for the backend.
+        - Managed infrastructure in AWS CDK.
+
+  - position: Teaching Assistant
+    company: Faculty of EEMCS, TU Delft
+    location: Delft, Netherlands
+    start: Sep 2019
+    end: Jun 2021
+    highlights:
+      - >-
+        Teaching Assistant for > 10 different courses for the Computer
+        Science bachelors program.
+
+  - position: Web Developer
+    company: Dizconto Ltd.
+    location: Den Haag, Netherlands
+    start: Apr 2020
+    end: Jul 2020
+    highlights:
+      - >-
+        Built a management console frontend for Dizconto, which provided
+        social media marketing integrations.
+      - >-
+        Planned website development, converted mockups into usable web
+        presence with TypeScript, React and NodeJS.
+      - >-
+        Also worked on implementing a development and deployment (CI/CD)
+        pipeline using Terraform and AWS.
+
+education:
+  - degree: M.Sc. in Computer Science
+    institution: EPFL
+    start: Sep 2021
+    end: Present
+    highlights:
+      - >-
+        Following courses on software security and privacy, compilers and
+        type-systems, and large-scale data handling.
+
+  - degree: B.Sc. in Computer Science Engineering
+    institution: TU Delft
+    start: Sep 2018
+    end: July 2021
+    highlights:
+      - Graduated cum laude with a GPA of 8.8.
+      - >-
+        Thesis on "Formal verification of functional programs in Haskell
+        and Agda".
+      - Minor in Quantum Science and Information.
+
+skills:
+  - name: Languages
+    text: Java/Kotlin, Golang, Javascript/Typescript, Python, Scala/Haskell
+  - name: UI
+    text: React.js, Remix, HTML/CSS
+  - name: Server Frameworks
+    text: SpringBoot, Node.js/Express, Gin
+  - name: Data Analysis
+    text: Pandas, Scikit-learn
+  - name: Database Technologies
+    text: SQLite, PostgreSQL, MySQL, DynamoDB
+  - name: Large Scale Data Wrangling
+    text: Apache Spark, Hadoop
+  - name: Deployment Environments
+    text: AWS, Azure, Kubernetes (k8s), Docker
+  - name: CI/CD
+    text: GitLab CI

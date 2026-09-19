@@ -1,0 +1,13 @@
+[package]
+name = "builder"
+version = "0.1.0"
+edition = "2021"
+description = "Renders index.html, print.html from resume.yaml via Tera templates"
+publish = false
+
+[dependencies]
+tera = { version = "2", features = ["fast"] }
+# Maintained fork of serde_yaml, published by the YAML Organization
+yaml_serde = "0.10"
+serde_json = "1"
+chrono = "0.4"
