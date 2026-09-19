@@ -28,26 +28,35 @@
   </head>
 
   <body>
-    <header id="page-header"></header>
+    <header class="page-header">
+      <div class="intro-main">
+        <div class="intro-info">
+          <h1>Dixit Sabharwal</h1>
+          <h2>Software Engineer</h2>
+          <p>
+            <i>currently working at AWS on the billing and monetisation infrastructure.</i>
+          </p>
+        </div>
+        <div class="intro-photo">
+          <img
+            src="profile-photo.webp"
+            alt="photo of me"
+            class="profile-photo"
+          />
+        </div>
+      </div>
+      <div class="intro-actions">
+        <a
+          href="resume.pdf"
+          download="DixitSabharwal_Resume.pdf"
+          class="download-button"
+        >
+          Save Resume
+        </a>
+      </div>
+    </header>
     <div class="container">
       <main class="main-content">
-        <header class="intro-section">
-          <div class="intro-info">
-            <h1>Dixit Sabharwal</h1>
-            <h2>Software Engineer</h2>
-            <p>
-              <i>currently working at AWS on the billing and monetisation infrastructure.</i>
-            </p>
-          </div>
-          <div class="intro-photo">
-            <img
-              src="profile-photo.webp"
-              alt="photo of me"
-              class="profile-photo"
-            />
-          </div>
-        </header>
-
         <section id="about">
           <h2>About Me</h2>
           <p>
@@ -265,61 +274,6 @@
         </section>
       </main>
       <aside class="sidebar">
-        <div class="quick-contacts">
-          <img
-            id="touching-hands"
-            src="icons/touching-hands.svg"
-            alt="Image of two hands reaching out and touching"
-            aria-hidden="true"
-            width="32px"
-            height="32px"
-          />
-          <a href="mailto:dixitsa@protonmail.com">
-            <img
-              id="email"
-              src="icons/email.svg"
-              alt="Email icon"
-              aria-hidden="true"
-              width="32px"
-              height="32px"
-            />
-          </a>
-          <a
-            href="https://linkedin.com/in/dixit-s"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              id="linkedin"
-              src="icons/linkedin.svg"
-              alt="LinkedIn icon"
-              aria-hidden="true"
-              width="32px"
-              height="32px"
-          /></a>
-          <a
-            href="https://github.com/dxts"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              id="github"
-              src="icons/github.svg"
-              alt="GitHub icon"
-              aria-hidden="true"
-              width="32px"
-              height="32px"
-          /></a>
-        </div>
-        <div>
-          <a
-            href="resume.pdf"
-            download="DixitSabharwal_Resume.pdf"
-            class="download-button"
-          >
-            📄 Save Resume
-          </a>
-        </div>
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
@@ -328,6 +282,52 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <div class="quick-contacts">
+            <img
+              id="touching-hands"
+              src="icons/touching-hands.svg"
+              alt="Image of two hands reaching out and touching"
+              aria-hidden="true"
+              width="32px"
+              height="32px"
+            />
+            <a href="mailto:dixitsa@protonmail.com">
+              <img
+                id="email"
+                src="icons/email.svg"
+                alt="Email icon"
+                aria-hidden="true"
+                width="32px"
+                height="32px"
+              />
+            </a>
+            <a
+              href="https://linkedin.com/in/dixit-s"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                id="linkedin"
+                src="icons/linkedin.svg"
+                alt="LinkedIn icon"
+                aria-hidden="true"
+                width="32px"
+                height="32px"
+            /></a>
+            <a
+              href="https://github.com/dxts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                id="github"
+                src="icons/github.svg"
+                alt="GitHub icon"
+                aria-hidden="true"
+                width="32px"
+                height="32px"
+            /></a>
+          </div>
         </nav>
       </aside>
     </div>

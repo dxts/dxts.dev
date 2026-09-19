@@ -130,7 +130,6 @@ section#about:before {
     width: var(--large-font-size);
     background-color: var(--accent-color-yellow);
     border-radius: 50%;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -164,6 +163,23 @@ details.list-item {
         list-style: none;
         cursor: pointer;
 
+        & h3::after {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            margin-left: 15px;
+            vertical-align: middle;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5 L17 12 L8 19 Z' fill='%23bf616a' stroke='%23bf616a' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover h3::after {
+            filter: brightness(1.1);
+        }
+
         & p {
             display: inline;
             font-family: "JetBrains Mono", monospace;
@@ -177,6 +193,10 @@ details.list-item {
             padding-left: 20px;
             border-left: 2px solid var(--title-color);
         }
+    }
+
+    &[open] summary.list-item-title h3::after {
+        transform: rotate(90deg);
     }
 
     & ul {
@@ -219,13 +239,20 @@ details.list-item {
     margin: 0;
 }
 
-/* Styling the intro section */
+/* Styling the page header — top-anchored, mirrors the container's columns */
 
-.intro-section {
+.page-header {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px 60px;
+}
+
+.intro-main {
+    flex: 3;
     display: flex;
     align-items: center;
-    padding: 20px 0px;
-    margin-bottom: 20px;
+    padding-right: 20px;
 }
 
 .intro-photo {
@@ -237,7 +264,6 @@ details.list-item {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-right: 20px;
 }
 
 .intro-info {
@@ -250,22 +276,38 @@ details.list-item {
     margin: 5px 0;
 }
 
+.intro-actions {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .intro-section {
+    .page-header {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 30px;
     }
 
-    .profile-photo {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .intro-main {
+        flex-direction: column;
+        gap: 20px;
+        padding-right: 0;
+    }
+
+    .intro-actions {
+        padding-left: 0;
     }
 }
 
-/* Styling the sidebar contact section */
+/* Styling the sidebar contact icons (below the nav) */
 .quick-contacts {
-    margin-top: 150px;
+    margin-top: 25px;
 }
 
 .quick-contacts > * {
@@ -280,19 +322,21 @@ details.list-item {
 /* PDF download button */
 .download-button {
     text-decoration: none;
-    display: block;
+    display: inline-block;
     font-family: var(--title-font);
-    font-size: var(--large-font-size);
+    font-size: var(--normal-font-size);
     font-weight: 500;
-    color: var(--text-color);
-    transition: color 0.3s ease;
+    color: #2e3440;
+    background-color: var(--accent-color-yellow);
+    border-radius: 10px;
+    transition: filter 0.3s ease;
 
-    padding: 15px 0px;
-    margin-top: 10px;
+    padding: 10px 20px;
+    margin-top: 15px;
 }
 
 .download-button:hover {
-    color: var(--accent-color-yellow);
+    filter: brightness(1.08);
 }
 
 /* Styling the sidebar nav links */
@@ -320,6 +364,32 @@ details.list-item {
     color: var(--secondary-color);
 }
 
+/* On narrow screens, stack the sidebar above the main sections */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .main-content {
+        padding-right: 0;
+    }
+
+    .sidebar {
+        padding-left: 0;
+    }
+
+    .sidebar nav {
+        position: static;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 25px;
+        margin-top: 0;
+    }
+}
+
 /* Styling the footer */
 .site-footer {
     text-align: center;
@@ -332,9 +402,4 @@ details.list-item {
 .site-footer p {
     margin: 0;
     font-family: var(--text-font);
-}
-
-/* Empty space in page header so that content starts in the center of the viewport */
-#page-header {
-    height: 33vh;
 }
