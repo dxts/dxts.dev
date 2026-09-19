@@ -36,15 +36,13 @@ basics:
 # of lines (rendered with <br /> between them).
 about:
   - - >-
-      I am a full-stack developer, trying to stay ahead of the newest
-      trends in building funtional interfaces, as well as
-      developing maintainable APIs that adhere to open standards. 
-      Also trying to stay proficient in deploying these solutions across
-      various environments; from the AWS cloud, to on-prem Kubernetes clusters,
-      and bare-metal VMs.
+      I am a full-stack developer who builds functional interfaces and
+      maintainable APIs that adhere to open standards.
+      I deploy these solutions across various environments; from the AWS
+      cloud, to on-prem Kubernetes clusters, and bare-metal VMs.
   - >-
     I'm dedicated to learning and building systems that are reliable and
-    functional. I am particularly interested in working on projects or with 
+    practical. I am particularly interested in working on projects or with 
     companies that support open-source software or work in the public sector. 
     I'm convinced of the importance of making quality software accessible to everyone.
 
@@ -53,49 +51,32 @@ work:
     company: AWS Billing (Amazon Web Services)
     location: Berlin, Germany
     start: Nov 2024
-    end: Currently
+    end: Present
     highlights:
       - >-
-        Developing and operating a system of record storing the product
-        catalog at AWS. The system operates in 6 regions (across US, EU,
-        China) servicing over 90 million requests per day with over 99.95%
-        availability. Operations include 24/7 on-call shifts, incident
-        response and port mortems.
+        Develop and operate the system of record for the AWS product
+        catalog — 90M+ requests per day across 6 regions (US, EU, China)
+        at 99.95%+ availability — including 24/7 on-call, incident
+        response and post mortems.
       - >-
-        I modernised our service's integration with the internal
-        DataWarehouse to deliver a data freshness SLA of <10 minutes, by
-        replacing snapshot exports that run every 8 hours with a CDC
-        processing pipeline that wrote to an Apache Iceberg catalog. The
-        Iceberg catalog also opened the doors to seamless integration with
-        AWS and OSS tooling, reducing the barrier of entry for using this
-        data for new tools.
+        Cut the internal DataWarehouse data-freshness SLA from 8 hours to
+        under 10 minutes by replacing snapshot exports with a CDC pipeline
+        writing to an Apache Iceberg catalog.
       - >-
-        I also contributed to the storage-layer refactor of our service,
-        where we migrated data from a MySQL cluster to DynamoDB tables,
-        without any service downtime and while maintaining the 99.95%
-        availability SLA of our apis.
+        Migrated 90% of the service's data from a MySQL cluster to
+        DynamoDB with zero downtime, holding the 99.95% availability SLA
+        throughout.
       - >-
-        I have also driven our progress towards zero-touch environment
-        creation, where we automate the process of spinning up a new
-        production environment for our service (required for new regions
-        launched by AWS). This included maximising infra-as-code for our
-        compute and storage needs and automatting the bootstrapping of
-        configurations, databases, access-control, etc.
+        Automated zero-touch creation of new production environments,
+        enabling the service to be stood up in a new AWS region with
+        3 weeks of passive work from a single engineer.
       - >-
-        I have contributed to the development of a web console through
-        which the management of different AWS services configure and price
-        their catalog and offerings. It is a functional interface that
-        must enable the users to wrangle large amounts of data with
-        integrations for a/b testing changes and built in approval
-        processes for changes.
-      - >-
-        I have gained a lot of experience with developing on the AWS
-        serverless stack, consistening of "Lambda" functions, "ECS"
-        containers, "StepFunction" state-machine orchestrators, "Glue"
-        spark jobs, etc.
+        Contributed to a web console used by the product owners of 250+
+        Amazon services to configure and price their catalog and
+        offerings, with built-in A/B testing and approval workflows.
 
-  - position: Software Developer
-    company: Facultés IC, EPFL
+  - position: Software Developer (Internship)
+    company: Faculté IC, EPFL
     location: Lausanne, Switzerland
     start: June 2023
     end: Jul 2023
@@ -115,7 +96,7 @@ work:
         the controller and Moodle in a staging environment, for quick
         integration testing and feedback.
 
-  - position: Data analyst
+  - position: Data Analyst (Internship)
     company: Taskbase
     location: Zurich, Switzerland
     start: Jul 2023
@@ -182,8 +163,11 @@ education:
     end: July 2024
     highlights:
       - >-
-        Following courses on software security and privacy, compilers and
+        Coursework in software security and privacy, compilers and
         type-systems, and large-scale data handling.
+      - >-
+        Thesis on "Analysis of AI augmented writing tools for contemporary
+        literature".
 
   - degree: B.Sc. in Computer Science Engineering
     institution: TU Delft
@@ -202,14 +186,16 @@ skills:
   - name: UI
     text: React.js, TanStack
   - name: Server Frameworks
-    text: SpringBoot, Hono, Axum/Tower
+    text: Spring Boot, Hono, Axum/Tower
   - name: Data Analysis
     text: Pandas, Scikit-learn
   - name: Database Technologies
     text: SQLite, PostgreSQL, MySQL, DynamoDB
-  - name: Large Scale Data Wrangling
+  - name: Data Engineering
     text: Apache Spark, Apache Iceberg, DuckDB
   - name: Deployment Environments
     text: AWS, Azure, Kubernetes (k8s), Docker
+  - name: AWS Serverless
+    text: Lambda, ECS, Step Functions, Glue
   - name: CI/CD
     text: GitLab CI
