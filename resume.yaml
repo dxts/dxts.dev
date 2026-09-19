@@ -8,21 +8,20 @@
 meta:
   title: Dixit Sabharwal - Software Engineer
   description: >-
-    Dixit Sabharwal, software engineer based in Lausanne and currently
-    studying at EPFL.
+    Dixit Sabharwal, software engineer based in Berlin, Germany and currently
+    working at AWS on the billing and monetisation infrastructure.
 
 basics:
   name: Dixit Sabharwal
   label: Software Engineer
   tagline: >-
-    currently studying at EPFL and acting as a swiss army knife for
-    software development work
-  email: hire@dxts.dev
-  url: https://dxts.dev
+    currently working at AWS on the billing and monetisation infrastructure.
+  email: dixitsa@protonmail.com
+  url: https://dxts.github.io/dxts.dev
   image: profile-photo.webp
   location:
-    city: Lausanne
-    country: Switzerland
+    city: Berlin
+    country: Germany
   profiles:
     - network: LinkedIn
       username: dixit-s
@@ -38,18 +37,16 @@ basics:
 about:
   - - >-
       I am a full-stack developer, trying to stay ahead of the newest
-      trends in building engaging and consistent frontends, as well as
-      developing maintainable APIs that adhere to open standards.
-    - >-
+      trends in building funtional interfaces, as well as
+      developing maintainable APIs that adhere to open standards. 
       Also trying to stay proficient in deploying these solutions across
-      various environments; from Kubernetes clusters and serverless cloud
-      functions to bare-metal VMs and on-premises servers.
+      various environments; from the AWS cloud, to on-prem Kubernetes clusters,
+      and bare-metal VMs.
   - >-
     I'm dedicated to learning and building systems that are reliable and
-    practical but also scalable where needed. I am particularly interested
-    in working on projects or with companies that support open-source
-    software or work in the public sector. I'm convinced of the importance
-    of making quality software accessible to everyone.
+    functional. I am particularly interested in working on projects or with 
+    companies that support open-source software or work in the public sector. 
+    I'm convinced of the importance of making quality software accessible to everyone.
 
 work:
   - position: Software Engineer
@@ -182,7 +179,7 @@ education:
   - degree: M.Sc. in Computer Science
     institution: EPFL
     start: Sep 2021
-    end: Present
+    end: July 2024
     highlights:
       - >-
         Following courses on software security and privacy, compilers and
@@ -201,17 +198,17 @@ education:
 
 skills:
   - name: Languages
-    text: Java/Kotlin, Golang, Javascript/Typescript, Python, Scala/Haskell
+    text: Java/Kotlin, Rust, Javascript/Typescript, Python
   - name: UI
-    text: React.js, Remix, HTML/CSS
+    text: React.js, TanStack
   - name: Server Frameworks
-    text: SpringBoot, Node.js/Express, Gin
+    text: SpringBoot, Hono, Axum/Tower
   - name: Data Analysis
     text: Pandas, Scikit-learn
   - name: Database Technologies
     text: SQLite, PostgreSQL, MySQL, DynamoDB
   - name: Large Scale Data Wrangling
-    text: Apache Spark, Hadoop
+    text: Apache Spark, Apache Iceberg, DuckDB
   - name: Deployment Environments
     text: AWS, Azure, Kubernetes (k8s), Docker
   - name: CI/CD
