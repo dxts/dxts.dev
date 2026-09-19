@@ -147,14 +147,10 @@ work:
     end: Jul 2020
     highlights:
       - >-
-        Built a management console frontend for Dizconto, which provided
-        social media marketing integrations.
+        Converted design mockups into a production web presence with
+        TypeScript, React and NodeJS.
       - >-
-        Planned website development, converted mockups into usable web
-        presence with TypeScript, React and NodeJS.
-      - >-
-        Also worked on implementing a development and deployment (CI/CD)
-        pipeline using Terraform and AWS.
+        Set up a CI/CD deployment pipeline using Terraform and AWS.
 
 education:
   - degree: M.Sc. in Computer Science

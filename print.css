@@ -7,14 +7,16 @@
     --title-color: #2e3440;
     --muted-color: #6b7280;
     --rule-color: #d8dee9;
+    --accent-red: #bf616a;
+    --accent-yellow: #ebcb8b;
 
     --title-font: "JetBrains Mono", monospace;
-    --text-font: "Inter", -apple-system, "Segoe UI", sans-serif;
+    --text-font: "Roboto Condensed", "Arial Narrow", sans-serif;
 }
 
 @page {
     size: A4;
-    margin: 14mm 16mm;
+    margin: 11mm 13mm;
 }
 
 * {
@@ -26,8 +28,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--text-font);
-    font-size: 10pt;
-    line-height: 1.45;
+    font-size: 9pt;
+    line-height: 1.28;
     color: var(--text-color);
     background: #ffffff;
 }
@@ -38,64 +40,97 @@ a {
 }
 
 h1,
-h2,
+h2 {
+    font-family: var(--title-font);
+    color: var(--title-color);
+    margin: 0;
+}
+
 h3,
 h4 {
-    font-family: var(--title-font);
+    font-family: var(--text-font);
     color: var(--title-color);
     margin: 0;
 }
 
 /* Header */
 .resume-header {
-    text-align: center;
-    margin-bottom: 4mm;
+    margin-bottom: 3mm;
+}
+
+.resume-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 3mm;
 }
 
 .resume-header h1 {
-    font-size: 20pt;
+    font-size: 17pt;
     letter-spacing: -0.5pt;
 }
 
+.resume-header h1::before {
+    content: "";
+    display: inline-block;
+    width: 3.5mm;
+    height: 3.5mm;
+    border-radius: 50%;
+    background: var(--accent-yellow);
+    margin-right: 2.5mm;
+    vertical-align: baseline;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
 .resume-label {
-    margin: 0.5mm 0 1.5mm;
-    font-size: 11pt;
+    margin: 0;
+    font-size: 10pt;
     color: var(--primary-color);
     font-family: var(--title-font);
 }
 
-.resume-contact {
+/* Contact (sidebar) */
+.contact-list {
     margin: 0;
-    font-size: 8.5pt;
-    color: var(--muted-color);
+    padding: 0;
+    list-style: none;
+    font-size: 8pt;
 }
 
-.resume-contact .sep {
-    margin: 0 1.2mm;
-    color: var(--rule-color);
+.contact-list li {
+    margin-bottom: 0.6mm;
+}
+
+/* Two-column body */
+.print-columns {
+    display: grid;
+    grid-template-columns: 1fr 52mm;
+    gap: 0 7mm;
+    align-items: start;
 }
 
 /* Sections */
 section {
-    margin-bottom: 4mm;
+    margin-bottom: 3mm;
 }
 
 section > h2 {
-    font-size: 12pt;
-    border-bottom: 0.4mm solid var(--rule-color);
-    padding-bottom: 0.8mm;
-    margin-bottom: 2mm;
+    font-size: 11pt;
+    border-bottom: 0.6mm solid var(--accent-red);
+    padding-bottom: 0.6mm;
+    margin-bottom: 1.5mm;
     break-after: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 section p {
-    margin: 0 0 1.5mm;
+    margin: 0 0 1.2mm;
 }
 
 /* Experience / education entries */
 .entry {
-    margin-bottom: 3mm;
-    break-inside: avoid;
+    margin-bottom: 1.8mm;
 }
 
 .entry-title {
@@ -103,45 +138,58 @@ section p {
     justify-content: space-between;
     align-items: baseline;
     gap: 4mm;
+    break-after: avoid;
 }
 
 .entry-title h3 {
-    font-size: 10.5pt;
+    font-size: 10pt;
 }
 
 .entry-meta {
     margin: 0;
-    font-size: 8.5pt;
+    font-size: 8pt;
     color: var(--muted-color);
     white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    line-height: 1.3;
+}
+
+.entry-meta span + span::before {
+    content: "·";
+    margin: 0 1.2mm;
+    color: var(--rule-color);
+}
+
+.entry-sub {
+    margin: 0.2mm 0 0;
+    font-size: 8pt;
+    color: var(--muted-color);
+    break-after: avoid;
 }
 
 .entry ul {
-    margin: 1mm 0 0;
-    padding-left: 5mm;
+    margin: 0.8mm 0 0;
+    padding-left: 4.5mm;
 }
 
 .entry li {
-    margin-bottom: 0.8mm;
+    margin-bottom: 0.5mm;
+    widows: 2;
+    orphans: 2;
+}
+
+/* Side column tweaks: narrow width, let title rows wrap */
+.col-side .entry-title {
+    flex-wrap: wrap;
+    gap: 0 2mm;
 }
 
 /* Skills */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5mm 6mm;
-}
-
 .skills-category {
     break-inside: avoid;
+    margin-bottom: 1.2mm;
 }
 
 .skills-category h4 {
-    font-size: 9pt;
+    font-size: 8.5pt;
     display: inline;
 }
 
@@ -156,8 +204,8 @@ section p {
 
 /* Footer */
 .resume-footer {
-    margin-top: 4mm;
+    margin-top: 2.5mm;
     text-align: center;
-    font-size: 7.5pt;
+    font-size: 7pt;
     color: var(--muted-color);
 }

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="print.css" />
@@ -15,236 +15,239 @@
 
   <body>
     <header class="resume-header">
-      <h1>Dixit Sabharwal</h1>
-      <p class="resume-label">Software Engineer</p>
-      <p class="resume-contact">
-        <a href="mailto:dixitsa@protonmail.com">dixitsa@protonmail.com</a>
-        <span class="sep">·</span>
-        <a href="https://dxts.github.io/dxts.dev">dxts.github.io/dxts.dev</a>
-        <span class="sep">·</span>
-        <a href="https://linkedin.com/in/dixit-s">linkedin.com/in/dixit-s</a>
-        <span class="sep">·</span>
-        <a href="https://github.com/dxts">github.com/dxts</a>
-        <span class="sep">·</span>
-        <span>Berlin, Germany</span>
-      </p>
+      <div class="resume-title-row">
+        <h1>Dixit Sabharwal</h1>
+        <p class="resume-label">Software Engineer</p>
+      </div>
     </header>
 
-    <section id="about">
-      <h2>Profile</h2>
-      <p>
-        I am a full-stack developer who builds functional interfaces and maintainable APIs that adhere to open standards. I deploy these solutions across various environments; from the AWS cloud, to on-prem Kubernetes clusters, and bare-metal VMs.
-      </p>
-      <p>
-        I&#39;m dedicated to learning and building systems that are reliable and practical. I am particularly interested in working on projects or with  companies that support open-source software or work in the public sector.  I&#39;m convinced of the importance of making quality software accessible to everyone.
-      </p>
-    </section>
+    <div class="print-columns">
+      <div class="col-main">
+        <section id="about">
+          <h2>Profile</h2>
+          <p>
+            I am a full-stack developer who builds functional interfaces and maintainable APIs that adhere to open standards. I deploy these solutions across various environments; from the AWS cloud, to on-prem Kubernetes clusters, and bare-metal VMs.
+          </p>
+          <p>
+            I&#39;m dedicated to learning and building systems that are reliable and practical. I am particularly interested in working on projects or with  companies that support open-source software or work in the public sector.  I&#39;m convinced of the importance of making quality software accessible to everyone.
+          </p>
+        </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>Software Engineer @ AWS Billing (Amazon Web Services)</h3>
-          <p class="entry-meta">
-            <span>Nov 2024 - Present</span>
-            <span>Berlin, Germany</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Develop and operate the system of record for the AWS product catalog — 90M+ requests per day across 6 regions (US, EU, China) at 99.95%+ availability — including 24/7 on-call, incident response and post mortems.
-          </li>
-          <li>
-            Cut the internal DataWarehouse data-freshness SLA from 8 hours to under 10 minutes by replacing snapshot exports with a CDC pipeline writing to an Apache Iceberg catalog.
-          </li>
-          <li>
-            Migrated 90% of the service&#39;s data from a MySQL cluster to DynamoDB with zero downtime, holding the 99.95% availability SLA throughout.
-          </li>
-          <li>
-            Automated zero-touch creation of new production environments, enabling the service to be stood up in a new AWS region with 3 weeks of passive work from a single engineer.
-          </li>
-          <li>
-            Contributed to a web console used by the product owners of 250+ Amazon services to configure and price their catalog and offerings, with built-in A/B testing and approval workflows.
-          </li>
-        </ul>
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>Software Engineer @ AWS Billing (Amazon Web Services)</h3>
+              <p class="entry-meta">
+                <span>Nov 2024 - Present</span>
+              </p>
+            </div>
+            <p class="entry-sub">Berlin, Germany</p>
+            <ul>
+              <li>
+                Develop and operate the system of record for the AWS product catalog — 90M+ requests per day across 6 regions (US, EU, China) at 99.95%+ availability — including 24/7 on-call, incident response and post mortems.
+              </li>
+              <li>
+                Cut the internal DataWarehouse data-freshness SLA from 8 hours to under 10 minutes by replacing snapshot exports with a CDC pipeline writing to an Apache Iceberg catalog.
+              </li>
+              <li>
+                Migrated 90% of the service&#39;s data from a MySQL cluster to DynamoDB with zero downtime, holding the 99.95% availability SLA throughout.
+              </li>
+              <li>
+                Automated zero-touch creation of new production environments, enabling the service to be stood up in a new AWS region with 3 weeks of passive work from a single engineer.
+              </li>
+              <li>
+                Contributed to a web console used by the product owners of 250+ Amazon services to configure and price their catalog and offerings, with built-in A/B testing and approval workflows.
+              </li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>Software Developer (Internship) @ Faculté IC, EPFL</h3>
+              <p class="entry-meta">
+                <span>June 2023 - Jul 2023</span>
+              </p>
+            </div>
+            <p class="entry-sub">Lausanne, Switzerland</p>
+            <ul>
+              <li>
+                Part of team that set-up an automatic grading system for programming assignments. Through a Moodle plugin and Kubernetes cluster the system allowed for easy scalability and fault-tolerance during peak times of the semester.
+              </li>
+              <li>
+                Created a controller (using Spring and Java) that runs each submission as a Job on the Kubernetes cluster. The controller sets up the env for the grading task, and returns the outcomes to Moodle.
+              </li>
+              <li>
+                Set-up CI/CD pipeline using GitLab CI that automatically deploys the controller and Moodle in a staging environment, for quick integration testing and feedback.
+              </li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>Data Analyst (Internship) @ Taskbase</h3>
+              <p class="entry-meta">
+                <span>Jul 2023 - Sep 2023</span>
+              </p>
+            </div>
+            <p class="entry-sub">Zurich, Switzerland</p>
+            <ul>
+              <li>
+                Built CLI tool which extracts data from CSV and Excel sources provided by clients and passes it through the Taskbase API, to speed up the onboarding process.
+              </li>
+              <li>
+                Generated sample data for QA tasks, through prompt engineering and OpenAI GPT models, to compensate for the lack of real data from new clients.
+              </li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>Software Development Intern @ AWS/Amazon</h3>
+              <p class="entry-meta">
+                <span>Aug 2022 - Feb 2023</span>
+              </p>
+            </div>
+            <p class="entry-sub">Berlin, Germany</p>
+            <ul>
+              <li>
+                Built a management console to empower ongoing migration of service to a new data model and store.
+              </li>
+              <li>
+                Console is a web-based UI to view and search through data, also compare between old and new versions, and trigger different tasks in the migration pipeline.
+              </li>
+              <li>
+                Used React and TypeScript for the website UI.<br />
+                Used the AWS serverless stack (Lambda, API Gateway, DynamoDB) for the backend.<br />
+                Managed infrastructure in AWS CDK.
+              </li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>Teaching Assistant @ Faculty of EEMCS, TU Delft</h3>
+              <p class="entry-meta">
+                <span>Sep 2019 - Jun 2021</span>
+              </p>
+            </div>
+            <p class="entry-sub">Delft, Netherlands</p>
+            <ul>
+              <li>
+                Teaching Assistant for &gt; 10 different courses for the Computer Science bachelors program.
+              </li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>Web Developer @ Dizconto Ltd.</h3>
+              <p class="entry-meta">
+                <span>Apr 2020 - Jul 2020</span>
+              </p>
+            </div>
+            <p class="entry-sub">Den Haag, Netherlands</p>
+            <ul>
+              <li>
+                Converted design mockups into a production web presence with TypeScript, React and NodeJS.
+              </li>
+              <li>
+                Set up a CI/CD deployment pipeline using Terraform and AWS.
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>Software Developer (Internship) @ Faculté IC, EPFL</h3>
-          <p class="entry-meta">
-            <span>June 2023 - Jul 2023</span>
-            <span>Lausanne, Switzerland</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Part of team that set-up an automatic grading system for programming assignments. Through a Moodle plugin and Kubernetes cluster the system allowed for easy scalability and fault-tolerance during peak times of the semester.
-          </li>
-          <li>
-            Created a controller (using Spring and Java) that runs each submission as a Job on the Kubernetes cluster. The controller sets up the env for the grading task, and returns the outcomes to Moodle.
-          </li>
-          <li>
-            Set-up CI/CD pipeline using GitLab CI that automatically deploys the controller and Moodle in a staging environment, for quick integration testing and feedback.
-          </li>
-        </ul>
-      </div>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>Data Analyst (Internship) @ Taskbase</h3>
-          <p class="entry-meta">
-            <span>Jul 2023 - Sep 2023</span>
-            <span>Zurich, Switzerland</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Built CLI tool which extracts data from CSV and Excel sources provided by clients and passes it through the Taskbase API, to speed up the onboarding process.
-          </li>
-          <li>
-            Generated sample data for QA tasks, through prompt engineering and OpenAI GPT models, to compensate for the lack of real data from new clients.
-          </li>
-        </ul>
-      </div>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>Software Development Intern @ AWS/Amazon</h3>
-          <p class="entry-meta">
-            <span>Aug 2022 - Feb 2023</span>
-            <span>Berlin, Germany</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Built a management console to empower ongoing migration of service to a new data model and store.
-          </li>
-          <li>
-            Console is a web-based UI to view and search through data, also compare between old and new versions, and trigger different tasks in the migration pipeline.
-          </li>
-          <li>
-            Used React and TypeScript for the website UI.<br />
-            Used the AWS serverless stack (Lambda, API Gateway, DynamoDB) for the backend.<br />
-            Managed infrastructure in AWS CDK.
-          </li>
-        </ul>
-      </div>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>Teaching Assistant @ Faculty of EEMCS, TU Delft</h3>
-          <p class="entry-meta">
-            <span>Sep 2019 - Jun 2021</span>
-            <span>Delft, Netherlands</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Teaching Assistant for &gt; 10 different courses for the Computer Science bachelors program.
-          </li>
-        </ul>
-      </div>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>Web Developer @ Dizconto Ltd.</h3>
-          <p class="entry-meta">
-            <span>Apr 2020 - Jul 2020</span>
-            <span>Den Haag, Netherlands</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Built a management console frontend for Dizconto, which provided social media marketing integrations.
-          </li>
-          <li>
-            Planned website development, converted mockups into usable web presence with TypeScript, React and NodeJS.
-          </li>
-          <li>
-            Also worked on implementing a development and deployment (CI/CD) pipeline using Terraform and AWS.
-          </li>
-        </ul>
-      </div>
-    </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>M.Sc. in Computer Science</h3>
-          <p class="entry-meta">
-            <span>EPFL</span>
-            <span>Sep 2021 - July 2024</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Coursework in software security and privacy, compilers and type-systems, and large-scale data handling.
-          </li>
-          <li>
-            Thesis on &quot;Analysis of AI augmented writing tools for contemporary literature&quot;.
-          </li>
-        </ul>
-      </div>
-      <div class="entry">
-        <div class="entry-title">
-          <h3>B.Sc. in Computer Science Engineering</h3>
-          <p class="entry-meta">
-            <span>TU Delft</span>
-            <span>Sep 2018 - July 2021</span>
-          </p>
-        </div>
-        <ul>
-          <li>
-            Graduated cum laude with a GPA of 8.8.
-          </li>
-          <li>
-            Thesis on &quot;Formal verification of functional programs in Haskell and Agda&quot;.
-          </li>
-          <li>
-            Minor in Quantum Science and Information.
-          </li>
-        </ul>
-      </div>
-    </section>
+      <div class="col-side">
+        <section id="contact">
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li><a href="mailto:dixitsa@protonmail.com">dixitsa@protonmail.com</a></li>
+            <li><a href="https://dxts.github.io/dxts.dev">dxts.github.io/dxts.dev</a></li>
+            <li><a href="https://linkedin.com/in/dixit-s">linkedin.com/in/dixit-s</a></li>
+            <li><a href="https://github.com/dxts">github.com/dxts</a></li>
+            <li>Berlin, Germany</li>
+          </ul>
+        </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skills-category">
-          <h4>Languages</h4>
-          <p>Java/Kotlin, Rust, Javascript/Typescript, Python</p>
-        </div>
-        <div class="skills-category">
-          <h4>UI</h4>
-          <p>React.js, TanStack</p>
-        </div>
-        <div class="skills-category">
-          <h4>Server Frameworks</h4>
-          <p>Spring Boot, Hono, Axum/Tower</p>
-        </div>
-        <div class="skills-category">
-          <h4>Data Analysis</h4>
-          <p>Pandas, Scikit-learn</p>
-        </div>
-        <div class="skills-category">
-          <h4>Database Technologies</h4>
-          <p>SQLite, PostgreSQL, MySQL, DynamoDB</p>
-        </div>
-        <div class="skills-category">
-          <h4>Data Engineering</h4>
-          <p>Apache Spark, Apache Iceberg, DuckDB</p>
-        </div>
-        <div class="skills-category">
-          <h4>Deployment Environments</h4>
-          <p>AWS, Azure, Kubernetes (k8s), Docker</p>
-        </div>
-        <div class="skills-category">
-          <h4>AWS Serverless</h4>
-          <p>Lambda, ECS, Step Functions, Glue</p>
-        </div>
-        <div class="skills-category">
-          <h4>CI/CD</h4>
-          <p>GitLab CI</p>
-        </div>
+        <section id="skills">
+          <h2>Skills</h2>
+          <div class="skills-category">
+            <h4>Languages</h4>
+            <p>Java/Kotlin, Rust, Javascript/Typescript, Python</p>
+          </div>
+          <div class="skills-category">
+            <h4>UI</h4>
+            <p>React.js, TanStack</p>
+          </div>
+          <div class="skills-category">
+            <h4>Server Frameworks</h4>
+            <p>Spring Boot, Hono, Axum/Tower</p>
+          </div>
+          <div class="skills-category">
+            <h4>Data Analysis</h4>
+            <p>Pandas, Scikit-learn</p>
+          </div>
+          <div class="skills-category">
+            <h4>Database Technologies</h4>
+            <p>SQLite, PostgreSQL, MySQL, DynamoDB</p>
+          </div>
+          <div class="skills-category">
+            <h4>Data Engineering</h4>
+            <p>Apache Spark, Apache Iceberg, DuckDB</p>
+          </div>
+          <div class="skills-category">
+            <h4>Deployment Environments</h4>
+            <p>AWS, Azure, Kubernetes (k8s), Docker</p>
+          </div>
+          <div class="skills-category">
+            <h4>AWS Serverless</h4>
+            <p>Lambda, ECS, Step Functions, Glue</p>
+          </div>
+          <div class="skills-category">
+            <h4>CI/CD</h4>
+            <p>GitLab CI</p>
+          </div>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>M.Sc. in Computer Science</h3>
+              <p class="entry-meta">
+                <span>Sep 2021 - July 2024</span>
+              </p>
+            </div>
+            <p class="entry-sub">EPFL</p>
+            <ul>
+              <li>
+                Coursework in software security and privacy, compilers and type-systems, and large-scale data handling.
+              </li>
+              <li>
+                Thesis on &quot;Analysis of AI augmented writing tools for contemporary literature&quot;.
+              </li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-title">
+              <h3>B.Sc. in Computer Science Engineering</h3>
+              <p class="entry-meta">
+                <span>Sep 2018 - July 2021</span>
+              </p>
+            </div>
+            <p class="entry-sub">TU Delft</p>
+            <ul>
+              <li>
+                Graduated cum laude with a GPA of 8.8.
+              </li>
+              <li>
+                Thesis on &quot;Formal verification of functional programs in Haskell and Agda&quot;.
+              </li>
+              <li>
+                Minor in Quantum Science and Information.
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
 
     <footer class="resume-footer">
       <p>Last updated September 19, 2026 · dxts.github.io/dxts.dev</p>
